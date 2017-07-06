@@ -1,0 +1,17 @@
+.tag {
+    padding: 3px;
+    margin-right: 3px;
+    border: 1px solid #98baf2;
+    border-radius: 3px;
+    background-color: #e5efff;
+    cursor: default;
+}
+
+.tag span {
+    cursor: pointer;
+}
+
+.glyphicon-trash {
+    cursor: pointer;
+    color: #d9534f;
+}
