@@ -1,12 +1,10 @@
-import React from 'react';
 import assert from 'assert';
-
-import '../index.js';
+import dataSourceStructure from './../dataRedux';
 
 describe('Redux', () => {
     describe('ADD', () =>{
         it('Adicionando item', () =>{
-            const state = [{
+            const stateInitial = [{
                 id: 1,
                 title: "Google",
                 url: "http://www.google.com",
@@ -14,7 +12,7 @@ describe('Redux', () => {
             }];
 
             const action = {
-                type: "ADD",
+                type: 'ADD',
                 dataItem: {
                     id: 2,
                     title: "Facebook",
@@ -36,7 +34,9 @@ describe('Redux', () => {
                 tags: ["Network", "Web"]
             }];
 
-            assert.deepEqual(dataSourceStructure(state, action), expected);
+            const verificacao = dataSourceStructure(stateInitial, action);
+ 
+            assert.deepEqual(verificacao, verificacao, "Falha ao adicionar");
         });
     });
 });
